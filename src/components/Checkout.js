@@ -21,7 +21,6 @@ const Checkout = () => {
     setFormData({ ...formData, [name]: value })
   }
 
-  const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0)
   const totalPrice = cart.reduce(
     (acc, item) => acc + item.quantity * item.price,
     0

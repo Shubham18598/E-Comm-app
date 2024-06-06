@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
+  const { cart } = useContext(CartContext)
+  console.log(cart.length)
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -37,9 +40,12 @@ const Navbar = () => {
             </div>
             <div className="col-12 col-lg-3 d-flex justify-content-end">
               <ul className="navbar-nav mb-2 mb-lg-0">
-                <li className="nav-item">
+                <li className="nav-item" style={{display:"flex"}}>
+                  <Link className="nav-link" to="/">
+                  <h5>Home</h5>
+                  </Link>
                   <Link className="nav-link" to="/cart">
-                    <h5>Cart</h5>
+                    <h5>Cart <span className="cart-length">{cart.length}</span></h5>
                   </Link>
                 </li>
               </ul>

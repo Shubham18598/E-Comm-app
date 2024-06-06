@@ -92,6 +92,7 @@
 .category-checkboxes label {
   margin-right: 2rem;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .category-checkboxes input[type="checkbox"] {
@@ -101,4 +102,10 @@
 
 .category-checkboxes label:hover {
   color: #4b70e2; 
+}
+
+.cart-length{
+  background-color: red;
+  padding: 0px 8px;
+  border-radius: 50%;
 }
